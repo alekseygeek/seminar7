@@ -1,8 +1,10 @@
 def get_contact():
     # получение строки который записываем в файл
-    name = input(' введите имя: ')
+    surname = input('введите фамилию:')
+    name = input('введите имя: ')
     phone = input("введите номер телефона: ")
-    return f'{name} , {phone} \n'
+    description = input('описание: ')
+    return f'{surname} {name} {phone} {description}\n'
 
 
 def fin_contact(book: list, req: str) -> str:
@@ -11,7 +13,7 @@ def fin_contact(book: list, req: str) -> str:
         if i.find(req) != -1:
             a = i
     if a == '':
-        return "Empty(пустой)"
+        return "нет такого контакта !!!"
     else:
         return a
 

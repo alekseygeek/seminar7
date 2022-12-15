@@ -4,7 +4,7 @@ def get_contact():
     name = input('введите имя: ')
     phone = input("введите номер телефона: ")
     description = input('описание: ')
-    return f'{surname} {name} {phone} {description}\n'
+    return f'фамилия:{surname}, имя: {name}, телефон:{phone}, комментарии:{description}\n'
 
 
 def fin_contact(book: list, req: str) -> str:
@@ -23,4 +23,4 @@ def get_request():
 
 
 def choose_mode():
-    return int(input("записать  контакт - 1 \nнайти контакт - 2\nвыход - 3 \nнажмите 1,2,3: "))
+    return int(input("записать  контакт (жми)- 1 \nнайти контакт (жми) - 2\nвыход (жми)- 3 \nнажмите цифру 1,2,3: "))

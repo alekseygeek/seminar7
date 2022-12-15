@@ -13,7 +13,7 @@ def fin_contact(book: list, req: str) -> str:
         if i.find(req) != -1:
             a = i
     if a == '':
-        return "нет такого контакта !!!"
+        return "нет такого контакта !"
     else:
         return a
 

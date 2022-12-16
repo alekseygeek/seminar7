@@ -1,10 +1,10 @@
-def get_contact():
-    # получение строки который записываем в файл
+def get_contact() -> dict:
+
     surname = input('введите фамилию:')
     name = input('введите имя: ')
     phone = input("введите номер телефона: ")
     description = input('описание: ')
-    return f'фамилия:{surname}, имя: {name}, телефон:{phone}, комментарии:{description}\n'
+    return {'surname': surname, 'name': name, 'phone': phone, 'description': description}
 
 
 def fin_contact(book: list, req: str) -> str:
@@ -18,9 +18,10 @@ def fin_contact(book: list, req: str) -> str:
         return a
 
 
-def get_request():
+def get_request() -> str:
     return input('найти контакт: ')
 
 
-def choose_mode():
+def choose_mode() -> int:
+    print()
     return int(input("записать  контакт (жми)- 1 \nнайти контакт (жми) - 2\nвыход (жми)- 3 \nнажмите цифру 1,2,3: "))
